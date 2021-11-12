@@ -4,4 +4,7 @@ flutter run (lancer)
 
 st => Flutter Stateful widget (créer classe)
 
+flutter clear
+
+
 

@@ -1,4 +1,3 @@
-
 class SignupForm {
   String? email;
   String? username;
@@ -8,4 +7,10 @@ class SignupForm {
     required this.username,
     required this.password,
   });
+  Map<String, dynamic> toJson() {
+    return {
+      'email': email,
+      'password': password,
+    };
+  }
 }
