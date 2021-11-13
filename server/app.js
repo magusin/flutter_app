@@ -1,9 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const index = require("./routes");
+var cors = require('cors');
 
 mongoose.connect(
-  "mongodb+srv://jean:123@cluster0-urpjt.gcp.mongodb.net/auth-flutter?retryWrites=true&w=majority",
+  "mongodb+srv://fanatsy:1991@cluster0.i1na8.mongodb.net/flutter?retryWrites=true&w=majority",
   (err) => {
     if (err) {
       console.log("ERROR DB");
@@ -17,7 +18,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
+app.use(cors());
 app.use(index);
 
 app.all("*", (req, res) => {
@@ -32,5 +33,10 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500);
   res.json("error");
 });
+
+// var corsOptions = {
+//  origin: *,
+//  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+// }
 
 module.exports = app;

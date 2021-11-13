@@ -2,6 +2,7 @@ const router = require("express").Router();
 const User = require("../models/user.model");
 const bcrypt = require("bcrypt");
 
+
 router.post("/", async (req, res, next) => {
   const body = req.body;
   try {
@@ -10,7 +11,7 @@ router.post("/", async (req, res, next) => {
       email: body.email,
       password: bcrypt.hashSync(body.password, 10),
     }).save();
-    res.status(200).end();
+    res.status(201).end();
   } catch (e) {
     next(e);
   }

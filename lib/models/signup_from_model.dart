@@ -11,6 +11,7 @@ class SignupForm {
     return {
       'email': email,
       'password': password,
+      'username' : username,
     };
   }
 }

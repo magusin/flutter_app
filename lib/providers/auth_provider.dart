@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class AuthProvider with ChangeNotifier {
-  final String host = 'http://10.0.2.2';
+  final String host = 'http://127.0.0.1';
   bool isLoading = false;
 
   Future<dynamic> signup(SignupForm signupForm) async {
@@ -16,7 +16,7 @@ class AuthProvider with ChangeNotifier {
         body: json.encode(signupForm.toJson()),
       );
       isLoading = false;
-      if (response.statusCode != 200) {
+      if (response.statusCode != 201) {
         return json.decode(response.body);
       }
       return null;
