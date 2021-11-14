@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_app/models/signup_from_model.dart';
+import 'package:flutter_app/models/signup_form_model.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 

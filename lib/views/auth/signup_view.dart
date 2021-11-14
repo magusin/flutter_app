@@ -1,11 +1,11 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/models/signup_from_model.dart';
+import 'package:flutter_app/models/signup_form_model.dart';
 import 'package:flutter_app/providers/auth_provider.dart';
 import 'package:flutter_app/views/auth/signin_view.dart';
 import 'package:provider/provider.dart';
-import '../../models/signup_from_model.dart';
+import '../../models/signup_form_model.dart';
 
 class SignupView extends StatefulWidget {
   static String routeName = '/signup';
